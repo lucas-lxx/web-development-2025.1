@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: white;
+  padding: 20px;
+}
+
+body {
+  padding:  0 20vw;
+  background-color: black;
+}
+
+header {
+  height: 15vh;
+}
+
+.citation__img-container {
+  width: auto;
+  height: 15vh;
+}
+
+.citation__img {
+  width: auto;
+  height: 15vh;
+}
+
+.profile__name-container {
+  background-color: black; 
+  height: 100%; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__name {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5vh 2vw;
+}
