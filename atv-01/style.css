@@ -1,0 +1,33 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+main {
+  width: 50vw;
+  background-color: white;
+  padding: 2vw;
+
+}
+
+h1 {
+  font-size: 7vw;
+}
+
+th {
+  font-size: 2vh;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.images > img {
+  width: 15vw;
+  height: auto;
+}
