@@ -1,0 +1,166 @@
+* {
+  /* CSS HEX */
+  --black-olive: #37392eff;
+  --russian-violet: #120d31ff;
+  --ash-gray: #9da9a0ff;
+  --redwood: #b26e63ff;
+  --marian-blue: #334195ff;
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background-color: var(--black-olive);
+}
+
+body {
+  background-color: var(--russian-violet);
+  margin: 0 2em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15dvh;
+  background-color: var(--redwood);
+  border-bottom: var(--ash-gray) solid 1px;
+}
+
+header h1 {
+  color: var(--ash-gray);
+}
+
+nav {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 5dvh;
+  height: fit-content;
+  top: 0;
+  position: sticky;
+  background-color: var(--redwood);
+}
+
+#burger-menu {
+  padding: 0.5em;
+  display: none;
+}
+
+#burger-menu-img {
+  width: 1em;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  padding: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ash-gray);
+  transition: all 0.1s;
+}
+
+nav a:hover {
+  font-size: 1.1em;
+}
+
+main {
+  display: flex;
+}
+
+#aside-left {
+  width: 30dvw;
+  height: 100dvh;
+  padding-top: 2em;
+}
+
+#aside-left a {
+  color: var(--ash-gray);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+#aside-left a:hover {
+  font-size: 1.1em;
+}
+
+article {
+  width: 70dvw;
+}
+
+#toggle-dark-btn {
+  position: fixed;
+  bottom: 2dvh;
+  right: 4dvw;
+  background-color: var(--redwood);
+  border: var(--redwood) solid 1px;
+  border-radius: 50px;
+  padding: 0.25em;
+}
+
+#light-btn-img {
+  display: block;
+  width: 1em;
+  height: auto;
+}
+
+#dark-btn-img {
+  display: none;
+  width: 1em;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 10dvh;
+  background-color: var(--redwood);
+}
+
+footer a {
+  color: var(--ash-gray);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+footer a:hover {
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 700px) {
+  nav ul{
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: none;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  body {
+    margin: 0;
+  }
+  #burger-menu {
+    display: inline;
+  }
+  #aside-left {
+    width: 100%;
+    height: fit-content;
+  }
+  #aside-right {
+    display: none;
+  }
+}
