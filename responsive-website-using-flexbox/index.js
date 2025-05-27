@@ -23,9 +23,13 @@ toggle_dark_mode_button.addEventListener('click', () => {
 
 
 burger_menu.addEventListener('click', () => {
-  if (nav_ul.style.display === 'none') {
-    nav_ul.style.display = 'inline';
+  console.log(nav_ul.classList.contains('no_show'));
+  console.log(nav_ul.classList);
+  if (nav_ul.classList.contains('no_show')) {
+    nav_ul.classList.add('show');
+    nav_ul.classList.remove('no_show');
   } else {
-    nav_ul.style.display = 'none';
+    nav_ul.classList.add('no_show');
+    nav_ul.classList.remove('show');
   }
 });

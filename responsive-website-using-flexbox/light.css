@@ -33,9 +33,9 @@ header h1 {
 
 nav {
   display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  
   min-height: 5dvh;
   height: fit-content;
   top: 0;
@@ -137,7 +137,19 @@ footer a:hover {
   font-size: 1.1em;
 }
 
+.show{
+  display: block;
+}
+.no_show{
+  display: none;
+}
+
 @media screen and (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
   nav ul{
     padding: 0;
     flex-direction: column;
@@ -161,5 +173,10 @@ footer a:hover {
   }
   #aside-right {
     display: none;
+  }
+}
+@media screen and (min-width: 701px) {
+  .no_show {
+    display: flex;
   }
 }
