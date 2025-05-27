@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .notification-card {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      width: 250px;
+      height: 80px;
+    }
+    .card-content h3 {
+      height: fit-content;
+      margin: 0;
+    }
+    .card-content p {
+      height: fit-chontent;
+      padding: 1em 0;
+      margin: 0;
+    }
+    .card-header {
+      display: flex;
+      justify-content: end;
+    }
+  </style>
+</head>
+<body>
+<div class="notification-card">
+  <div class="card-header">
+    <button id="btn" class="close-btn">X</button>
+  </div>
+  <div class="card-content">
+    <h3>Novidade!</h3>
+    <p>Confira nossos novos produtos.</p>
+  </div>
+</div>
+<script>
+  const btn = document.getElementById("btn");
+
+  btn.addEventListener('click', () => {
+    card_fixed = document.getElementsByClassName('notification-card');
+    card_fixed[0].style.display = 'none';
+  })
+</script>
+</body>
+</html>
