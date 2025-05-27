@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    main img {
+      width: 20vw;
+      height: auto;
+    }
+
+    header {
+      height: 20dvh;
+      background-color: brown;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article {
+      display: flex;
+      min-height: 60dvh;
+      height: fit-content;
+    }
+
+    aside {
+      width: 30vw;
+      min-height: 60dvh;
+      height: fit-content;
+      background-color: goldenrod;
+      padding: 1em;
+    }
+
+    main {
+      width: 70vw;
+      min-height: 60dvh;
+      height: 100%;
+      background-color: green;
+      padding: 1em;
+    }
+
+    footer {
+      width: 100%;
+      height: 20dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aqua;
+    }
+
+    @media screen and (max-width: 400px) {
+      header {
+        height: 14.5dvh;
+      }
+      article {
+        flex-direction: column;
+      }
+      main {
+        width: 100%;
+        min-height: fit-content;
+      }
+      aside {
+        width: 100%;
+        min-height: fit-content;
+      }
+      footer {
+        height: 15dvh
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Desenvolvimento de Software para WEB</h1>
+  </header>
+  <article>
+    <aside>
+      <h1>[Menu Lateral]</h1>
+      <ul>
+        <li><a href="./volte-mais-tarde.html">Link 1</a></li>
+        <li><a href="./volte-mais-tarde.html">Link 2</a></li>
+        <li><a href="./volte-mais-tarde.html">Link 3</a></li>
+        <li><a href="./volte-mais-tarde.html">Link 4</a></li>
+      </ul>
+    </aside>
+    <main>
+      <h1>Introdução ao HTML</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi iusto aliquam totam similique autem dolore veritatis adipisci incidunt quis earum quam, perferendis a voluptates ab nisi magnam quas assumenda? Eius.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti ab illo blanditiis vitae a exercitationem, molestias, sed dicta mollitia at expedita laudantium provident quis? Id voluptatibus obcaecati quos possimus.
+      </p>
+      <img src="./images/stock-1.jpg" alt="imagem representando a frase 'vamos trabalhar meu filho'">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus distinctio dolorem quas dolor numquam ratione. Recusandae magni deleniti exercitationem architecto totam obcaecati velit, iure quod in eum! Dolorem, repellat in.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laborum autem debitis tempora repudiandae similique quod fuga sit, laudantium ab quo totam impedit. Nihil dolores, sed illo quos quaerat natus.
+      </p>
+      <img src="./images/stock-2.webp" alt="imagem representando eu não aguento mais esse código">
+    </main>
+  </article>
+  <footer>
+    <em>
+      <a href="./volte-mais-tarde.html">fulanodetal@ufc.br</a>
+      <p>2025.1</p>
+      <p>todos os direitos reservados</p>
+    </em>
+  </footer>
+</body>
+</html>
