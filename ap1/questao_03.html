@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img style="width: 50vw; height: 50vh;" id="image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-wor
+ld/1.svg" alt="pokemon">
+<div>
+  <button id="voltar">voltar -1</button>
+  <button id="adiantar">adiantar +1</button>
+</div>
+<script>
+  const image = document.getElementById("image");
+  const voltar_btn = document.getElementById("voltar");
+  const adiantar_btn = document.getElementById("adiantar");
+  let image_pointer = 1;
+
+
+  voltar_btn.addEventListener('click', () => {
+    console.log('voltar hit');
+    if (image_pointer <= 1) {
+      return
+    }
+    let image_src = image.getAttribute('src')
+    image_pointer--;
+    image.setAttribute('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-wor
+ld/${image_pointer}.svg`);
+  })
+
+  adiantar_btn.addEventListener('click', () => {
+    console.log('adiantar hit');
+    if (image_pointer >= 100) {
+      return
+    }
+    image_pointer++;
+    image.setAttribute('src', `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-wor
+ld/${image_pointer}.svg`);
+  })
+</script>
+</body>
+</html>
