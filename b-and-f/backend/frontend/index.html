@@ -9,9 +9,27 @@
       text-align: left;
       padding-right: 2rem;
     }
+
+    form > div {
+      display: flex;
+      flex-direction: column;
+      width: 30vw;
+    }
+
   </style>
 </head>
 <body>
+  <form>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name">
+      <label for="Course">Course</label>
+      <input type="text" id="course">
+      <label for="ira">IRA</label>
+      <input type="number" step="0.01" id="ira">
+      <button type="submit">submit</button>
+    </div>
+  </form>
   <button id="refresh-btn">refresh</button>
   <table id="table">
     <thead>
