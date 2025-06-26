@@ -1,33 +1,19 @@
-const { Router, raw } = require('express');
-const User = require('../model/user.model');
+const { Router } = require("express");
+const {
+  createUser,
+  deleteById,
+  updateById,
+  findAll,
+} = require("../controller/user.controller");
 
 const router = Router();
 
-router.get('/', async (req, res) => {
-  res.send(await User.findAll({ raw: false }));
-});
+router.get("/", findAll);
 
-router.post('/', async (req, res) => {
-  console.log(req.body)
-  if (!req.body.name) {
-    res.status(400).json({message: "no body"});
-  }
-  const new_user = new User(req.body);
-  console.log(new_user);
+router.post("/", createUser);
 
-  new_user.save();
+router.delete("/:id", deleteById);
 
-  res.json(new_user);
-});
-
-router.delete('/:id', async (req, res) => {
-  const del_user = await User.findByPk(req.params.id);
-  await del_user.destroy();
-  res.json(del_user);
-});
-
-router.patch('/:id', async (req, res) => {
-  
-});
+router.patch("/:id", updateById);
 
 module.exports = router;
