@@ -2,24 +2,19 @@ services:
   app:
     build:
       context: .
-      dockerfile: "./Dockerfile"
-      args:
-        - USER_ID=1000
-        - GROUP_ID=1000
+      dockerfile: "./prod.dockerfile"
     ports:
       - 8080:3000
-    volumes:
-      - "./backend/:/app"
     env_file:
       - ./backend/.env
-    command: ["run", "dev"]
+    command: ["run", "start"]
+    depends_on:
+      - postgres
   postgres:
     image: "postgres:17"
     env_file:
       - ./backend/.env
-    ports:
-      - 5432:5432
     volumes:
-      - encurtador_pgdata:/var/lib/postgresql/data
+      - b-and-f:/var/lib/postgresql/data
 volumes:
-  encurtador_pgdata:
+  b-and-f:
