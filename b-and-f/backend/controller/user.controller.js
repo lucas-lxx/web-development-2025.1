@@ -1,10 +1,10 @@
 const User = require("../model/user.model");
 
-export async function findAll(req, res) {
+async function findAll(req, res) {
   res.send(await User.findAll({ raw: false }));
 }
 
-export async function createUser(req, res) {
+async function createUser(req, res) {
   try {
     if (!req.body.name) {
       return res.status(400).json({ message: "no name" });
@@ -14,6 +14,9 @@ export async function createUser(req, res) {
     }
     if (!req.body.ira) {
       return res.status(400).json({ message: "no ira" });
+    }
+    if (req.body.ira < "0" || req.body.ira > "10") {
+      return res.status(400).json({ message: "invalid ira" });
     }
     const new_user = new User(req.body);
 
@@ -26,14 +29,21 @@ export async function createUser(req, res) {
   }
 }
 
-export async function deleteById(req, res) {
+async function deleteById(req, res) {
   const del_user = await User.findByPk(req.params.id);
   await del_user.destroy();
   res.json(del_user);
 }
 
-export async function updateById(req, res) {
+async function updateById(req, res) {
   const user_to_update = await User.findByPk(req.params.id);
   const updated_user = await user_to_update.update(req.body);
   res.json(updated_user);
 }
+
+module.exports = {
+  findAll,
+  createUser,
+  deleteById,
+  updateById,
+};
